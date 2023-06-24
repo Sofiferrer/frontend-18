@@ -93,9 +93,9 @@ const semaforo = (color) => {
     return puedePasar
 };
 
-console.log(semaforo('rojo'));
-console.log(semaforo('frutilla'));
-console.log(puedePasar)
+// console.log(semaforo('rojo'));
+// console.log(semaforo('frutilla'));
+// console.log(puedePasar)
 //semaforo('rojo') vale false
 
 
@@ -115,3 +115,22 @@ console.log(puedePasar)
      
 //         break;
 // }
+
+
+// const ocultarContrasenia=(contrasenia)=>{
+//     return contrasenia.toString().replace(/[0-9]/g, '*')
+// };
+
+   
+// console.log(ocultarContrasenia(123456));
+// console.log(ocultarContrasenia(111222333));
+ 
+
+// const aHackerSpeak= (str)=>{
+//     return str.toString().replace(/[iI]/g,'1').replace(/[eE]/g,'3').replace(/[aA]/g,'4').replace(/[sS]/g,'5').replace(/[oO]/g,'0');
+//   }
+
+// console.log(aHackerSpeak('javascript'))
+// console.log(aHackerSpeak('soy una hacker'))
+// console.log(aHackerSpeak('ADA LOVELACE'))
+
