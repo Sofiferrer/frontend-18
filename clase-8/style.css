@@ -1,0 +1,17 @@
+.green {
+    color: green;
+    font-size: 20px;
+    text-decoration: wavy;
+}
+
+.titulo {
+    color: aqua;
+    background-color: yellow;
+    font-size: 30px;
+    text-align: center;
+}
+
+.modo-oscuro {
+    background-color: darkslategray;
+    color: beige;
+}
