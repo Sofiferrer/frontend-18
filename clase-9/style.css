@@ -1,0 +1,14 @@
+.caja {
+    width: 80%;
+    height: 50vh;
+    border: 1px solid black;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton {
+    width: 20%;
+    height: 5vh;
+}
