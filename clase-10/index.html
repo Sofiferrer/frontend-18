@@ -7,6 +7,39 @@
     <title>Document</title>
   </head>
   <body>
+    <form>
+      <label for="name">Nombre *</label>
+      <input id="name" type="text" required minlength="10" maxlength="20" />
+      <br />
+      <label for="lastName">Apellido *</label>
+      <input id="lastName" type="text" required minlength="10" maxlength="20" />
+      <br />
+      <label for="age">Edad</label>
+      <input id="age" type="number" min="18" max="100" />
+      <br />
+      <label for="phone">Telefono</label>
+      <input id="phone" type="tel" minlength="10" max="14" />
+      <br />
+      <label for="mail">Email *</label>
+      <input
+        id="mail"
+        type="email"
+        required
+        pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/."
+      />
+      <br />
+      <label for="password">Contrasenia *</label>
+      <input
+        id="password"
+        type="password"
+        required
+        minlength="8"
+        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+      />
+      <br />
+      <button type="button" id="submit-btn">Registrar</button>
+    </form>
+
     <script src="script.js"></script>
   </body>
 </html>

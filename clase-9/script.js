@@ -13,7 +13,7 @@ const cambioDeColor = (color) => {
 }
 
 boton.addEventListener('click', () => cambioDeColor(colorcito));
-boton.addEventListener('click', () => modoOscuro())
+boton.addEventListener('click', (e) => modoOscuro(e))
 
 // Eventos de mouse y teclado
 // El objeto Event
@@ -24,7 +24,8 @@ const obtenerColor = (e) => {
   colorcito = e.target.value;
 }
 
-const modoOscuro = () => {
+const modoOscuro = (e) => {
+  console.log(e)
   cajaDelInput.style.backgroundColor = 'rgb(18,15,20)'
 }
 
