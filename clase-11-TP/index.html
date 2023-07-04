@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="cuerpo">
+      <div class="header-main-container">
+        <header>
+          <button id="img-btn">Imagen</button>
+          <button id="text-btn">Texto</button>
+          <button id="mode-btn">Modo claro</button>
+        </header>
+        <main>
+          <div class="meme-container">
+            <div class="text-container top-text">
+              <p>TOP TEXT</p>
+            </div>
+            <div class="meme-img" id="meme-img"></div>
+            <div class="text-container bottom-text">
+              <p>BOTTOM TEXT</p>
+            </div>
+          </div>
+        </main>
+      </div>
+      <div class="aside-container">
+        <div class="aside hidden" id="aside-text">TEXT</div>
+        <div class="aside" id="aside-img">
+          IMAGE
+
+          <input type="text" id="url-input" />
+          <input
+            type="range"
+            min="0"
+            max="1"
+            value="1"
+            step="0.1"
+            id="bright-input"
+          />
+          <input
+            type="range"
+            min="100"
+            max="1000"
+            value="100"
+            step="1"
+            id="contrast-input"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

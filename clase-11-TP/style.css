@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.cuerpo {
+    display: flex;
+}
+
+.header-main-container {
+    width: 80%;
+}
+
+.aside-container {
+    width: 20%;
+}
+
+.aside {
+    height: 100vh;
+    background-color: gray;
+}
+
+.dark-aside {
+    background-color: black;
+    color: white;
+}
+
+.meme-container {
+    height: 80vh;
+    width: 60%;
+    margin: auto;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.meme-img {
+    height: 70%;
+    width: 100%;
+    background-color: aquamarine;
+    background-size: cover; 
+    background-repeat: 'no-repeat';
+    background-position: 'center';
+}
+
+.text-container {
+    height: 15%;
+    background-color: rgb(179, 179, 171);
+}
