@@ -4,6 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+      integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+      integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/8cc6b6e6f6.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Document</title>
   </head>
   <body>
@@ -12,22 +28,40 @@
         <header>
           <button id="img-btn">Imagen</button>
           <button id="text-btn">Texto</button>
-          <button id="mode-btn">Modo claro</button>
+          <button id="mode-btn">🌃 Modo oscuro</button>
+
+          <button type="button" id="download-btn">Descargar</button>
         </header>
-        <main>
-          <div class="meme-container">
-            <div class="text-container top-text">
-              <p>TOP TEXT</p>
-            </div>
+
+        <!-- INICIO MAIN -->
+        <main class="main-container" id="main-container">
+          <div class="meme-container" id="meme-container">
+            <p class="text-container top-text" id="top-text">TOP TEXT</p>
             <div class="meme-img" id="meme-img"></div>
-            <div class="text-container bottom-text">
-              <p>BOTTOM TEXT</p>
-            </div>
+            <p class="text-container bottom-text" id="bottom-text">
+              BOTTOM TEXT
+            </p>
           </div>
         </main>
+        <!-- FIN MAIN -->
       </div>
       <div class="aside-container">
-        <div class="aside hidden" id="aside-text">TEXT</div>
+        <!-- ASIDE TEXTO -->
+
+        <div class="aside hidden" id="aside-text">
+          TEXT
+
+          <select id="font-selector">
+            <option selected disabled>Elija una fuente</option>
+            <option value="Arial, Helvetica, sans-serif">Arial</option>
+            <option value="'Times New Roman', Times, serif">
+              Times New Roman
+            </option>
+          </select>
+        </div>
+
+        <!-- ASIDE IMAGEN -->
+
         <div class="aside" id="aside-img">
           IMAGE
 
@@ -48,6 +82,11 @@
             step="1"
             id="contrast-input"
           />
+          <input type="checkbox" id="top-text-input" />
+          <input type="checkbox" id="bottom-text-input" />
+          <input type="color" class="input-color" id="color-picker" /><span
+            id="color-name"
+          ></span>
         </div>
       </div>
     </div>

@@ -1,54 +1,77 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .cuerpo {
-    display: flex;
+  display: flex;
 }
 
 .header-main-container {
-    width: 80%;
+  width: 80%;
 }
 
 .aside-container {
-    width: 20%;
+  width: 20%;
 }
 
 .aside {
-    height: 100vh;
-    background-color: gray;
+  height: 100vh;
+  background-color: gray;
 }
 
 .dark-aside {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+
+.main-container-dark {
+  background-color: darkslategrey;
 }
 
 .meme-container {
-    height: 80vh;
-    width: 60%;
-    margin: auto;
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  height: 80vh;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .meme-img {
-    height: 70%;
-    width: 100%;
-    background-color: aquamarine;
-    background-size: cover; 
-    background-repeat: 'no-repeat';
-    background-position: 'center';
+  width: 100%;
+  flex-grow: 1;
+  background-color: aquamarine;
+  background-size: cover;
+  background-repeat: "no-repeat";
+  background-position: "center";
 }
 
 .text-container {
-    height: 15%;
-    background-color: rgb(179, 179, 171);
+  background-color: rgb(179, 179, 171);
+  padding: 21px 50px;
+  font-size: 53px;
+  text-align: center;
+}
+
+.input-color {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+}
+
+.input-color::-webkit-color-swatch,
+.input-color::-webkit-color-swatch-wrapper {
+  border-radius: 100%;
+  border: none;
+  padding: 0;
 }
