@@ -15,17 +15,26 @@ const nombres = ["Sol", "Maria", "sofia", "florencia"];
 // El método filter() toma cada elemento de un arreglo y aplica una instrucción condicional contra él. Si este condicional devuelve true, el elemento se envía al arreglo de salida. Si la condición devuelve false, el elemento no se envía al arreglo de salida.
 
 const pares = numeros.filter((item) => item % 2 === 0);
-console.log(pares); // [2, 4]
+//console.log(pares); // [2, 4]
 
 const nombresEnMayuscula = nombres.filter(
   (nombre) => nombre.charAt(0) === nombre.charAt(0).toUpperCase()
 );
-console.log(nombresEnMayuscula);
+//console.log(nombresEnMayuscula);
 
 // Array.reduce()
 // El método reduce() reduce un arreglo de valores a un solo valor. Para obtener el valor de salida, ejecuta una función reductora en cada elemento del arreglo.
-// const numeros = [1, 2, 3, 4];
-// const suma = numeros.reduce(function (resultado, elemento) {
-//   return resultado + elemento;
-// }, 0);
-// console.log(suma); // 10
+
+
+const suma = numeros.reduce((acc, item) => {
+  return acc + item;
+}, 5);
+//console.log(suma); // 10
+
+
+let palabras = ['¡', 'Hola,', 'mundo', '!'];
+// en este ejemplo estamos haciendo una reducción del array a un string
+const frase = palabras.reduce((acumulador, item) => {
+  return acumulador + ' ' + item;
+}, 'Frase:');
+//console.log(frase); // Frase: ¡ Hola, mundo 
