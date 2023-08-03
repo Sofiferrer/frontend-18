@@ -106,4 +106,4 @@ const ponerMayusculas = (array) => {
   return nombresEnMayuscula;
 };
 
-console.log(ponerMayusculas(nombres));
+//console.log(ponerMayusculas(nombres));
