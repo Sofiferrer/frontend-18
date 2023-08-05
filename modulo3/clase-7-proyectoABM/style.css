@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--background-body);
+}
+
+section {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 40px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  color: var(--font-color);
+}
+
+.form-container {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.new-item-input {
+  width: 80%;
+  height: 45px;
+  margin: 0 auto;
+  padding: 5px 10px;
+}
+
+.btn-add {
+  height: 50px;
+  width: 80%;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.list {
+  height: 70%;
+  width: 90%;
+  margin: 0 auto;
+  border: 3px dashed var(--font-color);
+  border-radius: 20px;
+  overflow-y: scroll;
+}
+
+.list-item {
+  width: 80%;
+  height: 35px;
+  margin: 5px auto;
+  padding: 2px 25px;
+  border-radius: 10px;
+  background-color: orange;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+}
+
+.btn-mode {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+[data-theme="light"] {
+  --background-body: aliceblue;
+  --font-color: black;
+}
+
+[data-theme="dark"] {
+  --background-body: #424242;
+  --font-color: aliceblue;
+}

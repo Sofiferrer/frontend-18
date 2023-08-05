@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body id="body" data-theme="light">
+    <button id="modeBtn" type="button" class="btn-mode btn">🌑</button>
+    <section class="items-container">
+      <h2>Agregar item</h2>
+      <form onsubmit="return false" id="listForm" class="form-container">
+        <input
+          id="newItemInput"
+          class="new-item-input"
+          type="text"
+          placeholder="Nuevo item"
+        />
+        <button id="addButton" class="btn-add button is-success" type="button">
+          Agregar
+        </button>
+      </form>
+    </section>
+    <section class="list-container">
+      <h2>LISTA 📝</h2>
+      <ul id="list" class="list"></ul>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
