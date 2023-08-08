@@ -1,0 +1,15 @@
+.balance {
+  background-color: red;
+  height: 40vh;
+}
+
+.filtros {
+  background-color: green;
+  height: 30vh;
+  margin-top: 10vh;
+}
+
+.operaciones {
+  background-color: blue;
+  height: 150vh;
+}
