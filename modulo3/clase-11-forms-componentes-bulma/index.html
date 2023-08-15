@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container mt-6">
+      <div class="imagen-fondo"></div>
+      <h3 class="title has-text-centered mt-5">Formulario de registro</h3>
+
+      <form class="form-container" action="#">
+        <div class="columns is-multiline">
+          <div class="column is-6 field">
+            <label class="label">Nombre</label>
+            <div class="control">
+              <input
+                id="nameInput"
+                class="input is-info"
+                type="text"
+                placeholder="Escriba su nombre"
+              />
+            </div>
+          </div>
+
+          <div class="column is-6 field">
+            <label class="label">Apellido</label>
+            <div class="control">
+              <input
+                id="lastNameInput"
+                class="input is-primary"
+                type="text"
+                placeholder="Escriba su apellido"
+              />
+            </div>
+          </div>
+
+          <div class="column is-6 field">
+            <label class="label">Fecha nacimiento</label>
+            <div class="control">
+              <input id="birthInput" class="input is-primary" type="date" />
+            </div>
+          </div>
+
+          <div class="column is-6 field">
+            <label class="label">Curso</label>
+            <div class="select is-fullwidth">
+              <select id="classSelect"></select>
+            </div>
+          </div>
+        </div>
+        <input type="reset" class="button is-danger" />
+        <input type="submit" class="button is-success" />
+      </form>
+      <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content box">
+          <form class="form-container">
+            <div class="field">
+              <label class="label">Nombre del curso</label>
+              <div class="control">
+                <input
+                  id="curseName"
+                  class="input is-info"
+                  type="text"
+                  placeholder="Escriba aqui..."
+                />
+              </div>
+            </div>
+            <input id="addCourse" type="submit" class="button is-success" />
+          </form>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+      <button id="addBtn" type="button" class="button is-violet text-white">
+        Agregar Curso
+      </button>
+      <!-- <button type="button" id="deleteBtn" class="button is-danger">Eliminar Curso</button> -->
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
