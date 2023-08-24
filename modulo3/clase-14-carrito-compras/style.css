@@ -1,0 +1,18 @@
+.column {
+  min-height: 30vh;
+}
+.card {
+  height: 40vh;
+  width: 20%;
+}
+.card-footer {
+  min-height: 10vh;
+}
+
+.navbar-start {
+  align-items: center;
+}
+
+.fa-cart-arrow-down {
+  cursor: pointer;
+}
