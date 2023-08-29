@@ -1,14 +1,21 @@
 const randomId = () => self.crypto.randomUUID();
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => document.querySelectorAll(selector);
-const carrito = [];
 
-// const producto = {
-//   id: randomId(),
-//   nombre: "Cama Yaya",
-//   precio: "12000",
-//   foto: "https://images.unsplash.com/photo-1600369671854-f3293a0da0c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FtYSUyMGdhdG98ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60",
-// };
+const tienda = JSON.parse(localStorage.getItem("miTienda")) || {
+  usuarios: [],
+  ventas: [],
+  favoritos: [],
+  carrito: [],
+};
+
+const actualizarTienda = (datos) => {
+  localStorage.setItem("miTienda", JSON.stringify(datos));
+};
+
+const traerDatos = () => {
+  return JSON.parse(localStorage.getItem("miTienda"));
+};
 
 const productos = [
   {
@@ -73,8 +80,12 @@ crearCards(productos);
 
 const agregarAlCarrito = (idProducto) => {
   let productoFiltrado = productos.filter((prod) => prod.id === idProducto);
-  carrito.push(productoFiltrado);
-  console.log(carrito);
+  console.log(productoFiltrado[0]);
+  if (!tienda.carrito.includes(productoFiltrado[0])) {
+    tienda.carrito.push(productoFiltrado[0]);
+  }
+  actualizarTienda(tienda);
+  mostrarCarrito();
 };
 
 const botones = $$(".add-button");
@@ -82,3 +93,24 @@ const botones = $$(".add-button");
 botones.forEach((boton) =>
   boton.addEventListener("click", () => agregarAlCarrito(boton.id))
 );
+
+const eliminarDeCarrito = () => {
+  let datosActualizados = traerDatos();
+};
+
+$("#carrito").addEventListener("click", () => {
+  $("#modal").classList.add("is-active");
+});
+
+$("#close-modal").addEventListener("click", () => {
+  $("#modal").classList.remove("is-active");
+});
+
+const mostrarCarrito = () => {
+  $("#modal-content").innerHTML = "";
+  traerDatos().carrito.forEach(
+    (item) => ($("#modal-content").innerHTML += `<li>${item.nombre}</li>`)
+  );
+};
+
+mostrarCarrito();
