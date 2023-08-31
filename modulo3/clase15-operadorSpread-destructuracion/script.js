@@ -103,3 +103,32 @@ const usuarios = [
 let nuevoArr = [...usuarios, usuario];
 //console.log(usuarios);
 //console.log(nuevoArr);
+
+// let fruta = "naranja";
+// let color = fruta;
+// color = "verde";
+// console.log("fruta", fruta);
+// console.log("color", color);
+
+// let colores = ["verde", "rojo", "azul"];
+// let colors = colores;
+// colors.push("amarillo");
+// console.log("colorEs", colores);
+// console.log("colors", colors);
+
+const vehiculo = {
+  marca: "Ford",
+  color: "Blanco",
+  modelo: "Fiesta",
+  patente: "abc854",
+};
+
+const { marca, color, patente, modelo: model } = vehiculo;
+
+console.log(marca, color, model);
+
+let auto = { ...vehiculo };
+
+auto.marca = "Toyota";
+console.log(vehiculo);
+console.log(auto);
