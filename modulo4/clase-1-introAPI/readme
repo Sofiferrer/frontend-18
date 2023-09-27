@@ -1,0 +1,19 @@
+APIs
+Qué es una API y para qué se utiliza
+REST API (Representational State Transfer)
+Estructura de una API URI (Uniform Resource Identifier)
+Recursos
+Endpoint
+¿Qué son los endpoints y cómo se relacionan con los recursos?
+Parámetros de ruta en la URI.
+Parámetros de búsqueda (Query Parameters) en la URI.
+Estructura de un pedido HTTP
+Métodos HTTP
+Cómo se realizan los pedidos (requests) HTTP en una API REST.
+Inclusión de headers y el cuerpo de la solicitud.
+Descripción de los métodos HTTP comunes: GET, POST, PUT, DELETE.
+Códigos de Status HTTP (200, 404, 500, etc.)
+Métodos de autenticación (api keys)
+CORS (Cross-Origin Resource Sharing)
+Operaciones síncronas vs asíncronas
+fetch, then y catch
