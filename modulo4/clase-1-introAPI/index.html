@@ -3,21 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Document</title>
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body">
+      <div class="container-fluid">
+        <a id="home-btn" class="navbar-brand" href="#">Rick and Morty app</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="d-flex" role="search">
+            <input
+              id="name-input"
+              class="form-control me-2"
+              type="search"
+              placeholder="Name.."
+              aria-label="Search"
+            />
+            <select id="gender-select">
+              <option value="">Select an option</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="genderless">Genderless</option>
+              <option value="unknown">Unknown</option>
+            </select>
+            <select id="status-select">
+              <option value="">Select an option</option>
+              <option value="dead">Dead</option>
+              <option value="alive">Alive</option>
+              <option value="unknown">Unknown</option>
+            </select>
+            <button
+              id="search-btn"
+              class="btn btn-outline-success"
+              type="button"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
     <main class="container">
       <div id="charcaters-container" class="row gap-3 view"></div>
       <div id="character-detail" class="row visually-hidden view"></div>
+      <div id="no-results" class="row visually-hidden view">
+        No results found
+      </div>
+      <div class="pagination-container">
+        <button id="prev-btn" type="button" class="btn btn-primary">
+          Prev
+        </button>
+        <span id="page-number"></span>
+        <button id="next-btn" type="button" class="btn btn-primary">
+          Next
+        </button>
+      </div>
     </main>
 
-    <script src="./js/main.js"></script>
     <script src="./js/api.js"></script>
+    <script src="./js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
