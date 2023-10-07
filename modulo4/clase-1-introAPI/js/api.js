@@ -29,10 +29,10 @@ const getFilterCharacters = (params) => {
     .catch((error) => window.alert(`HAY ERROOOOR ${error}`));
 };
 
-// const getLocation = (location) => {
-//   fetch(`${baseURL}/location/${location}`) //promesa
-//     .then((response) => response.json()) // respuesta parseada
-//     .then((data) => console.log(data)); // data
-// };
+const getEpisodes = () => {
+  fetch(`${baseURL}/episode`) //promesa
+    .then((response) => response.json()) // respuesta parseada
+    .then((data) => console.log(data)); // data
+};
 
 window.onload = getCharacters();

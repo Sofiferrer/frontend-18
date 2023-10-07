@@ -86,3 +86,5 @@ const filterCharacters = () => {
 };
 
 $("#search-btn").addEventListener("click", () => filterCharacters());
+
+const getEpisodeName = () => {};
